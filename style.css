@@ -1,0 +1,394 @@
+body, html {
+	height:100%;
+	background-color: #0c0c0c;
+	margin: 0;
+	font-family: 'Advent Pro', sans-serif;
+}
+
+a:link, a:visited {
+	text-align: center;
+	text-decoration: none;
+	font-size: 2em;
+	color: white; 
+	font-family: 'Advent Pro', sans-serif;
+	-webkit-transition: .12s ease-in-out;
+	transition: .12s ease-in-out;
+}
+
+a:hover {
+	color: darkgrey;
+	text-shadow: 2px 2px #db3f06;
+}
+
+#img1, #portfolio, #contact {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; 	/*	fixed = parallax, scroll = normal	*/
+}
+
+/*.overlay{
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	opacity: 0.65;
+	z-index: 1;
+}*/
+
+#img1 {
+	background-image:url('img/citysweepvin.gif');
+	/*background-color: #0c0c0c;*/
+	min-height: 100vh;
+}
+
+#portfolio {
+	background-color: #1c1c1c;
+	/*background: linear-gradient(#2d2d2d, #0c0c0c);*/
+	background: linear-gradient(black, #0c0c0c);
+	/*min-height: 30vh;*/
+	margin-bottom: 40px;
+}
+
+#contact {
+	background-color: #0c0c0c;
+	/*min-height: 660px;*/
+	height: auto;
+	margin-top: 5px;
+}
+
+.section {
+	text-align:center;
+	padding: 10px 80px;
+}
+
+.section-dark {
+	position: relative;
+	color: white;
+	background-color: #171b1f;
+	background: linear-gradient(#0c0c0c, #1d252c);
+}
+
+#vids {
+	padding: 20px;
+	top: 13%;
+	position: absolute;
+	margin-left: 24%;
+}
+
+.text {
+	position:absolute;
+	text-align:center;
+	/*text-transform:uppercase;*/
+	top:47%;
+	width:100%;
+	font-size:20px;
+	letter-spacing:10px;
+	line-height:50px;
+	color:white;
+}
+
+.links {
+	position:absolute;
+	text-align:center;
+	text-transform:uppercase;
+	bottom: 10px;
+	width: 100%;
+	font-size:15px;
+	letter-spacing:4px;
+	color:white;
+}
+
+.left-link {
+	float:left;
+	margin-left: 50px;
+}
+
+.right-link {
+	float:right;
+	margin-right: 50px;
+}
+
+.title {
+	font-size: 3em;
+	text-shadow: 3px 3px 4px #db3f06;
+}
+
+.portfolio-title, .contact-title {
+	font-size: 2.2em;
+	position:absolute;
+	text-align:center;
+	/*text-transform:uppercase;*/
+	margin-top: 30px;
+	width:100%;
+	color: white;
+}
+
+.contact-content {
+	background-image:url('img/stars.gif');
+	/*background-size: 1500px;*/
+	font-family: verdana;
+	color: white;
+    margin: auto;
+    width: 95%;
+    border: 3px solid #1d252c;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact-content p {
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 140%;
+}
+
+#contact-info {
+	padding-top: 70px;
+}
+
+#content-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 300px;
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
+
+#socials {
+    position:relative;
+    top: 15px;
+    left: 1px;
+}
+
+#socials a:hover {
+	opacity: 0.6;
+}
+
+#company {
+	font-size: 1.5em;
+}
+
+.vidlist {
+	max-width: auto;
+}
+
+.vidwrapper {
+	position: relative;
+	padding-left: 5%;
+/*	padding-right: auto;
+/*	margin-left: auto;*/
+	padding-top: 85px;
+	margin-right: auto;
+	width: 95%;
+}
+
+.vidimg {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	margin-bottom: 12px;
+}
+
+.vidimg:hover {
+	opacity: .6;
+}
+
+/* FIXED MENU */
+
+.menu {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    margin-left: 15px;
+    margin-top: 15px;
+    z-index: 999;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.menu:hover {
+	opacity: 0.7;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    -webkit-transition: .35s ease-in-out;
+	transition: .35s ease-in-out;
+}
+
+/* ON CLICKING THE MENU */
+
+.change{
+	margin-left: -45px;
+}
+
+/* First bar - rotate */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+    background-color: lightgrey;
+}
+
+/* Second bar - fade */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Third bar - rotate */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: lightgrey;
+}
+
+/* SideNav */
+
+.sideNav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background-color: black;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: .5s;
+}
+
+.sideNav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 28px;
+	color: white;
+	display: block;
+	transition: .4s;
+}
+
+.sideNav a:hover {
+	color: darkgrey;
+}
+
+.sideNav .closeBtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 35px;
+	margin-left: 50px;
+}
+
+#entirePage {
+	transition: margin-left .6s;
+	padding: 0;
+	margin: 0;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-device-width: 500px) {
+	
+	body {
+		font-size: 1em;
+	}
+	
+	.title {
+		font-size: 80px;
+		line-height: 130%;
+	}
+	
+	.sideNav a {
+		font-size: 75px;
+	}
+
+	.links {
+		visibility: hidden;
+	}
+
+	.vid .vidimg {
+		min-width: 92%;
+	}
+
+	.vidwrapper {
+		padding-top: 12%;
+	}
+
+	.contact-content {
+		padding-top: 40px;
+		font-size: .8em;
+	}
+
+	.contact-content p {
+		padding-left: 30px;
+		padding-right: 30px;
+		line-height: 150%;
+	}
+
+	.portfolio-title, .contact-title {
+		font-size: 3.3em;
+	}
+
+	.bar1, .bar2, .bar3 {
+    width: 85px;
+    height: 6px;
+    margin: 25px 0;
+    margin-left: 22px;
+	}
+
+	.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+    transform: rotate(-45deg) translate(-8px, 8px);
+    background-color: lightgrey;
+	}
+
+	.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-35px, -35px);
+    transform: rotate(45deg) translate(-35px, -35px);
+    background-color: lightgrey;
+	}
+
+}
+
+@media only screen and (min-width: 150px) {
+
+	.vid {
+		padding-left: 12px;
+	}
+
+	.vid .vidimg {
+		width: 90%;
+	}
+
+}
+
+@media only screen and (min-width: 550px) {
+
+	.vid {
+		padding-left: 12px;
+	}
+
+	.vid .vidimg {
+		width: 45%;
+	}
+
+}
+
+@media only screen and (min-width: 1051px) {
+
+	.vid {
+		padding-left: 12px;
+	}
+
+	.vid .vidimg {
+		width: 30%;
+	}
+}
