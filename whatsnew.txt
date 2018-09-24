@@ -1,0 +1,9 @@
+added "id="inactive-link" to facebook link on bottom
+
+updated instagram link
+
+animate() for .title
+
+new background
+
+updated videos
